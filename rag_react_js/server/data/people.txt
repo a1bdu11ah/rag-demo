@@ -1,0 +1,10 @@
+Abdullah is a backend developer. He works mainly with JavaScript, Node.js, Python,
+FastAPI, PostgreSQL, REST APIs, and backend services. He is currently learning
+Retrieval-Augmented Generation, embeddings, vector search, and techniques for
+handling large datasets.
+
+Sara is a product designer. She works on user interfaces, design systems, user
+research, and prototypes.
+
+Ali is a frontend developer. He mainly works with React, JavaScript, TypeScript,
+and web performance.

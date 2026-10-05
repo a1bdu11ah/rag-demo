@@ -1,0 +1,17 @@
+Retrieval-Augmented Generation, commonly called RAG, combines information retrieval
+with language generation.
+
+Documents are split into smaller chunks. Each chunk is converted into an embedding
+vector. An embedding vector is a list of numbers that represents semantic meaning.
+
+When a user asks a question, the question is also converted into an embedding vector.
+The RAG system compares the question vector with the stored document vectors.
+
+Vectors that are close together usually represent text with similar meaning. Cosine
+similarity is one common way to measure how similar two vectors are.
+
+The system retrieves the most similar chunks and gives them to a language model.
+The language model uses the retrieved context to generate a final answer.
+
+In short, vectors help RAG find the relevant information, while the generator model
+uses that information to write the answer.
