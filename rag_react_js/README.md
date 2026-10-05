@@ -129,8 +129,6 @@ server/data/
 
 Restart the backend so the vector index is rebuilt.
 
-## Important
-
 ## Deploy the frontend to Vercel
 
 The repository-root `vercel.json` installs and builds `rag_react_js/client`
