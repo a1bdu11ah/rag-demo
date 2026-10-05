@@ -1,0 +1,6 @@
+.git
+**/node_modules
+**/dist
+**/.env
+**/.env.*
+rag_react_js/server

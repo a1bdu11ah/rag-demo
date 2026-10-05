@@ -131,4 +131,27 @@ Restart the backend so the vector index is rebuilt.
 
 ## Important
 
+## Deploy the frontend to Vercel
+
+The repository-root `vercel.json` installs and builds `rag_react_js/client`
+and serves its `dist` directory. Import this repository into Vercel and leave
+the Root Directory at the repository root. The backend is deployed separately.
+
+Before deploying, add the Vercel environment variable `VITE_API_BASE_URL` with
+the public HTTPS origin of your backend, without a trailing `/api` path. For
+example: `https://your-backend.example.com`. This value is included in the public
+frontend bundle; never put secrets in it. Redeploy after changing the variable.
+
+The existing backend runs local Transformers models and downloads model files.
+It has not been validated as a Vercel Function. Host it on a Node.js server or
+container with enough memory and writable model cache storage. It honors the
+hosting provider's `PORT` environment variable. Check `/api/health` until its
+status is `ready`, then test a question through `/api/ask`.
+
+For local development, the Vite server proxies `/api` to `localhost:3001`.
+No frontend environment variable is required locally. Dependencies, build
+output, model cache files, and private environment files are excluded from Git.
+
+## Production considerations
+
 This is an educational demo. For a production system, you would usually use a proper vector database, persistent indexes, authentication, access controls, monitoring, and a stronger generation model.
